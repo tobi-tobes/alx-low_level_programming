@@ -1,6 +1,12 @@
 #include <stdio.h>
 
-/* This program prints out a string with the puts() function */
+/**
+ * main - entry point
+ *
+ * Description: This program prints the given string using the puts() function
+ *
+ * Return: Always 0 (Success)
+*/
 int main(void)
 {
 	/* Initialize string */
