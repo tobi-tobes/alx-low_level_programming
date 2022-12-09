@@ -10,9 +10,11 @@ int main(void)
 	int i;
 
 
-	for (i = 0; i <= 100; i++)
+	for (i = 0; i < 90; i++)
 	{
 		if ((i / 10) == (i % 10))
+			continue;
+		else if ((i > 0) && ((i / 10) > (i % 10)))
 			continue;
 		else
 		{
