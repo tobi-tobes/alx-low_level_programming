@@ -7,18 +7,17 @@
  */
 int main(void)
 {
-	char alphabet[27];
+	char c;
 
-	/* declare alphabet variable */
-	alphabet = "abcdefghijklmnopqrstuvwxyz";
+	/* declare c variable */
+	c = "a";
 
-	/* use for loop and putchar to print alphabet */
-	for (int i = 0; i < 27; i++)
+	/* use while loop and putchar to print alphabet */
+	while (c <= 'z')
 	{
-		if (alphabet[i] == '\0')
-			putchar("\n");
-		else
-			putchar(alphabet[i]);
+		putchar(c);
+		c = c + 1;
 	}
+	putchar('\n');
 	return (0);
 }
