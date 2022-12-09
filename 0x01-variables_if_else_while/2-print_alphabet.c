@@ -7,17 +7,10 @@
  */
 int main(void)
 {
-	char *c;
-
-	/* declare c variable */
-	c = "a";
-
-	/* use while loop and putchar to print alphabet */
-	while (c <= "z")
+	/* use for loop and putchar to print alphabet */
+	for (char c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
-		c = c + 1;
 	}
-	putchar("\n");
 	return (0);
 }
