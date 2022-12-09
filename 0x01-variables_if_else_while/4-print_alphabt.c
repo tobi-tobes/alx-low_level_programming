@@ -13,7 +13,7 @@ int main(void)
 	/* use for loop and if-else statement to print alphabet */
 	for (c = 'a'; c <= 'z'; c++)
 	{
-		if (c == e || c == q)
+		if (c == 'e' || c == 'q')
 			continue;
 		else
 			putchar(c);
