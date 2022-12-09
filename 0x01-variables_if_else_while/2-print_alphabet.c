@@ -7,17 +7,17 @@
  */
 int main(void)
 {
-	char c;
+	char *c;
 
 	/* declare c variable */
 	c = "a";
 
 	/* use while loop and putchar to print alphabet */
-	while (c <= 'z')
+	while (c <= "z")
 	{
 		putchar(c);
 		c = c + 1;
 	}
-	putchar('\n');
+	putchar("\n");
 	return (0);
 }
