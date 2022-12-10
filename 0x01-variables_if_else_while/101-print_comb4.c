@@ -12,11 +12,12 @@ int main(void)
 	int t;
 	int u;
 
+	i = 0;
 	h = (i / 100) % 10;
 	t = (i / 10) % 10;
 	u = i % 10;
 
-	for (i = 0; i < 790; i++)
+	for (; i < 790; i++)
 	{
 		if (u == t || h == u || h == t)
 			continue;
