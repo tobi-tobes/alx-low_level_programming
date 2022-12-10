@@ -8,26 +8,22 @@
 int main(void)
 {
 	int i;
-	int h;
-	int t;
-	int u;
-
-	i = 0;
-	h = (i / 100) % 10;
-	t = (i / 10) % 10;
-	u = i % 10;
 
 	for (i = 0; i < 790; i++)
 	{
-		if (u == t || h == u || h == t)
+		if ((i % 10) == ((i / 10) % 10) ||
+		    ((i / 100) % 10) == (i % 10) ||
+		    ((i / 100) % 10) == ((i /10) % 10))
 			continue;
-		else if (h > t || h > u || t > u)
+		else if (((i / 100) % 10) > ((i / 10) % 10) ||
+			 ((i / 100) % 10) > (i % 10) ||
+			 ((i / 10) % 10) > (i % 10))
 			continue;
 		else
 		{
-			putchar(h + '0');
-			putchar(t + '0');
-			putchar(u + '0');
+			putchar((i / 100) % 10) + '0');
+			putchar((i / 10) % 10) + '0');
+			putchar((i % 10) + '0');
 			if (i == 789)
 				continue;
 			else
