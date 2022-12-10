@@ -25,9 +25,9 @@ int main(void)
 			continue;
 		else
 		{
-			putchar(h);
-			putchar(t);
-			putchar(u);
+			putchar(h + '0');
+			putchar(t + '0');
+			putchar(u + '0');
 			if (i == 789)
 				continue;
 			else
