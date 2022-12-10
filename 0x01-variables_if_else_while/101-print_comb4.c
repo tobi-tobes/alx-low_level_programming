@@ -17,7 +17,7 @@ int main(void)
 	t = (i / 10) % 10;
 	u = i % 10;
 
-	for (; i < 790; i++)
+	for (i = 0; i < 790; i++)
 	{
 		if (u == t || h == u || h == t)
 			continue;
