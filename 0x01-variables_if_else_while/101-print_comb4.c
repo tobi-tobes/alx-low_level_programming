@@ -21,8 +21,8 @@ int main(void)
 			continue;
 		else
 		{
-			putchar((i / 100) % 10) + '0');
-			putchar((i / 10) % 10) + '0');
+			putchar(((i / 100) % 10) + '0');
+			putchar(((i / 10) % 10) + '0');
 			putchar((i % 10) + '0');
 			if (i == 789)
 				continue;
