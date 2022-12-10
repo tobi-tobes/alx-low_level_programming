@@ -17,17 +17,13 @@ int main(void)
 		{
 			if ((j / 10) == 0 && (j / 10) == (j % 10))
 				continue;
-			else if ((i / 10) == (j / 10) &&
-				 (i % 10) == (j % 10))
+			else if ((i / 10) == (j / 10) && (i % 10) == (j % 10))
 				continue;
-			else if ((i / 10) == (j / 10) &&
-				 (i % 10) > (j % 10))
+			else if ((i / 10) == (j / 10) && (i % 10) > (j % 10))
 				continue;
-			else if ((i / 10) > (j / 10) &&
-				 (i % 10) > (j % 10))
+			else if ((i / 10) > (j / 10) && (i % 10) > (j % 10))
 				continue;
-			else if ((i / 10) > (j / 10) &&
-				 (i % 10) == (j % 10))
+			else if ((i / 10) > (j / 10) && (i % 10) == (j % 10))
 				continue;
 			else if ((i / 10) > (j / 10))
 				continue;
