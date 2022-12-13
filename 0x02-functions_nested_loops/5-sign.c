@@ -2,7 +2,7 @@
 
 /**
  * print_sign - prints +, 0, or - based on the number
- * @c: The character to print
+ * @n: The character to print
  *
  * Return: On success 1.
  * Return 0 or -1 when zero or negative respectively.
