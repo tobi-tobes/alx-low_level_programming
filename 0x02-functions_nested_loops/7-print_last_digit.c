@@ -11,8 +11,12 @@
 int print_last_digit(int n)
 {
 	int l;
+	int s;
 
 	l = abs(n % 10);
+	s = l + '0';
+
+	write(1, &s, 1);
 
 	return (l);
 }
