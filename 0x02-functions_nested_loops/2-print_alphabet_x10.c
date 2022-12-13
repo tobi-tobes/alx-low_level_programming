@@ -11,7 +11,7 @@ void print_alphabet_x10(void)
 	int c;
 
 	a = 'a';
-	c = 10;
+	c = 1;
 
 	while (c <= 10)
 	{
@@ -21,5 +21,6 @@ void print_alphabet_x10(void)
 			a++;
 		}
 		write(1, "\n", 1);
+		c++;
 	}
 }
