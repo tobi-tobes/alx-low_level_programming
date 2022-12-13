@@ -2,9 +2,10 @@
 #include <ctype.h>
 
 /**
- * _islower(int c): returns 1 if lowercase and 0 otherwise
+ * _islower: returns 1 if lowercase and 0 otherwise
+ * @c: the character to check
  *
- * Return: Always 0.
+ * Return: On success 1.
  */
 int _islower(int c)
 {
