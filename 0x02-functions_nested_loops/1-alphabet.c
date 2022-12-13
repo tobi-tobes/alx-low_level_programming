@@ -3,10 +3,17 @@
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: None.
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+        char counter;
+        counter = 'a';
+        while (counter <= 'z')
+        {
+                write(1, &counter, 1);
+                counter++;
+        }
+        write(1, "\n", 1);
+        return;
 }
