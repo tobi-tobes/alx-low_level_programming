@@ -18,8 +18,15 @@ void times_table(void)
 			m_upper = (m / 10) + '0';
 			m_lower = (m % 10) + '0';
 
-			if ((m / 10) > 0 || (m / 10) == 0)
+			if ((m / 10) > 0)
 				write(1, &m_upper, 1);
+			else if (m == 0)
+			{
+				write(1, "0", 1);
+				write(1, ",", 1);
+				write(1, " ", 1);
+				continue;
+			}
 			else
 				write(1, " ", 1);
 			write(1, &m_lower, 1);
