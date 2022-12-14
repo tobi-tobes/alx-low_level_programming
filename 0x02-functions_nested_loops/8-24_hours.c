@@ -7,7 +7,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-void jack_bauer(void);
+void jack_bauer(void)
 {
 	int h;
 	int m;
