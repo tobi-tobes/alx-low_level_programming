@@ -20,7 +20,7 @@ void times_table(void)
 
 			if ((m / 10) > 0)
 				write(1, &m_upper, 1);
-			else if (i == 0)
+			else if (j == 0 && j != 9)
 			{
 				write(1, "0", 1);
 				write(1, ",", 1);
