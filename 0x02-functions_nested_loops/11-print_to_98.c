@@ -9,10 +9,10 @@
  */
 void print_to_98(int n)
 {
+	int i, u, l;
+
 	if (n < 98)
 	{
-		int i, u, l;
-
 		while (n <= 98)
 		{
 			i = n + '0';
