@@ -54,7 +54,7 @@ void print_times_table(int n)
 			{
 				write(1, "\n", 1);
 			}
-			write(1, "\n", 1);
 		}
 	}
+	write(1, "\n", 1);
 }
