@@ -70,6 +70,7 @@ void print_to_98(int n)
 				write(1, " ", 1);
 			}
 			n--;
+		}
 	}
 	else
 	{
