@@ -1,29 +1,35 @@
 #include <unistd.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * print_to_98 - prints all the numbers from the giveb number to 98
+ * @n: The character to print
  *
- * Return: On success 1.
+ * Return: No value
  * On error, -1 is returned, and errno is set appropriately.
  */
 void print_to_98(int n)
 {
 	if (n < 98)
 	{
+		int i, u, l;
+
 		while (n <= 98)
 		{
-			int i;
-
 			i = n + '0';
+			u = (n / 10) + '0';
+			l = (n & 10) + '0';
 
-			write(1, &i, 1);
-			if (n == 98)
-				continue;
-			else
+			if (n > 9)
 			{
-				write (1, ",", 1);
-				write (1, " ", 1);
+				write(1, &u, 1);
+				write(1, &l, 1);
+			}
+			else
+				write(1, &i, 1);
+			if (n != 98)
+			{
+				write(1, ",", 1);
+				write(1, " ", 1);
 			}
 			n++;
 		}
@@ -32,27 +38,33 @@ void print_to_98(int n)
 	{
 		while (n >= 98)
 		{
-			int i;
-
 			i = n + '0';
+			u = (n / 10) + '0';
+			l = (n & 10) + '0';
 
-			write(1, &i, 1);
-			if (n == 98)
-				continue;
-			else
+			if (n > 9)
 			{
-				write (1, ",", 1);
-				write (1, " ", 1);
+				write(1, &u, 1);
+				write(1, &l, 1);
+			}
+			else
+				write(1, &i, 1);
+			if (n != 98)
+			{
+				write(1, ",", 1);
+				write(1, " ", 1);
 			}
 			n--;
 		}
 	}
 	else
 	{
-		int i;
-
 		i = n + '0';
+		u = (n / 10) + '0';
+		l = (n % 10) + '0';
 
-		write(1, &i, 1);
+		write(1, &u, 1);
+		write(1, &l, 1);
 	}
+	write(1, "\n", 1);
 }
