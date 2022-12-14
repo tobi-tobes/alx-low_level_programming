@@ -12,7 +12,7 @@ void print_times_table(int n)
 		return;
 	else
 	{
-		int i, j, u, l, hu, hm, mt;
+		int i, j, u, l, hu, hm, mt, m;
 
 		for (i = 0; i <= n; i++)
 		{
