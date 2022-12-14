@@ -12,14 +12,13 @@ void print_times_table(int n)
 		return;
 	else
 	{
-		int i, j, u, l, hu, hm, mt, m;
+		int i, j, l, hu, hm, mt, m;
 
 		for (i = 0; i <= n; i++)
 		{
 			for (j = 0; j <= n; j++)
 			{
 				m = (i * j);
-				u = (m / 10) + '0';
 				l = (m % 10) + '0';
 				hu = (m / 100) + '0';
 				hm = ((m / 10) % 10) + '0';
