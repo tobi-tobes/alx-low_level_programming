@@ -6,17 +6,17 @@
  * Returns nothing
  * On error, -1 is returned, and errno is set appropriately.
  */
-void print_times_table(int n))
+void print_times_table(int n)
 {
 	if (n > 15 || n < 0)
 		return;
 	else
 	{
-		int i, j, u, l, hu, hm;
+		int i, j, u, l, hu, hm, mt;
 
-		for (i = 0; i < 10; i++)
+		for (i = 0; i <= n; i++)
 		{
-			for (j = 0; j < 10; j++)
+			for (j = 0; j <= n; j++)
 			{
 				m = (i * j);
 				u = (m / 10) + '0';
