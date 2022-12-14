@@ -1,4 +1,5 @@
-#include <unistd.h>
+#include "main.h"
+
 /**
  * print_times_table - prints the n times table starting with 0
  * @n: number to be put in
@@ -8,53 +9,49 @@
  */
 void print_times_table(int n)
 {
-	if (n > 0 && n < 15)
+	if (n >= 0 && n <= 15)
 	{
-		int i, j, l, hu, hm, mt, m;
+		int i, j, m;
 
 		for (i = 0; i <= n; i++)
 		{
 			for (j = 0; j <= n; j++)
 			{
 				m = (i * j);
-				l = (m % 10) + '0';
-				hu = (m / 100) + '0';
-				hm = ((m / 10) % 10) + '0';
-				mt = m + '0';
 
 				if (m > 99)
 				{
-					write(1, ",", 1);
-					write(1, " ", 1);
-					write(1, &hu, 1);
-					write(1, &hm, 1);
-					write(1, &l, 1);
+					_putchar(",");
+					_putchar(" ");
+					_putchar((m / 100) + '0');
+					_putchar(((m / 10) % 10) + '0');
+					_putchar((m % 10) + '0');
 				}
 				else if (m > 9)
 				{
-					write(1, ",", 1);
-					write(1, " ", 1);
-					write(1, " ", 1);
-					write(1, &hm, 1);
-					write(1, &l, 1);
+					_putchar(",");
+					_putchar(" ");
+					_putchar(" ");
+					_putchar(((m / 10) % 10) + '0');
+					_putchar((m % 10) + '0');
 				}
 				else
 				{
 					if (j != 0)
 					{
-						write(1, ",", 1);
-						write(1, " ", 1);
-						write(1, " ", 1);
-						write(1, " ", 1);
+						_putchar(",");
+						_putchar(" ");
+						_putchar(" ");
+						_putchar(" ");
 					}
-					write(1, &mt, 1);
+					_putchar(m + '0');
 				}
 			}
 			if (i != n)
 			{
-				write(1, "\n", 1);
+				_putchar("\n");
 			}
 		}
-		write(1, "\n", 1);
+		_putchar("\n");
 	}
 }
