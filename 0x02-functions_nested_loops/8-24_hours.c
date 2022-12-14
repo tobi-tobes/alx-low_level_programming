@@ -1,11 +1,9 @@
 #include <unistd.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * jack_bauer - prints every minute of the day from 00:00 to 23:59
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * No return value
  */
 void jack_bauer(void)
 {
