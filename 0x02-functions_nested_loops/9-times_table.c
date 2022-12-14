@@ -18,7 +18,7 @@ void times_table(void)
 			m_upper = (m / 10) + '0';
 			m_lower = (m % 10) + '0';
 
-			if ((m / 10) > 0)
+			if ((m / 10) > 0 || (m / 10) == 0)
 				write(1, &m_upper, 1);
 			else
 				write(1, " ", 1);
