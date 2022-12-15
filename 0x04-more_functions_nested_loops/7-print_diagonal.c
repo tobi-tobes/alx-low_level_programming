@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
+ * print_diagonal - draws a diagonal line on the terminal
  * @n: Determines length of line
  *
  * Return: No value.
