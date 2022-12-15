@@ -21,5 +21,6 @@ int main(void)
 			largest_pfactor = num / i;
 	}
 	printf("%ld", largest_pfactor);
+	printf("\n");
 	return (0);
 }
