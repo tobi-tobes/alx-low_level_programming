@@ -10,10 +10,12 @@
 int main(void)
 {
 	long i, num, largest_pfactor;
+	double square;
 
 	num = 612852475143;
+	square = sqrt(num);
 
-	for (i = 1; i <= sqrt(num); i++)
+	for (i = 1; i <= square; i++)
 	{
 		if (num % i == 0)
 			largest_pfactor = num / i;
