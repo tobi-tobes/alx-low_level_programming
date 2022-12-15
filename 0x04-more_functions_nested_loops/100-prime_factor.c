@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - check the code
@@ -8,15 +9,15 @@
  */
 int main(void)
 {
-	long num, prime_factor, highest_prime, factor;
-	int i, j;
+	long i, num, largest_pfactor;
 
 	num = 612852475143;
 
-	for (i = 2; i <= num; i++)
+	for (i = 1; i <= sqrt(num); i++)
 	{
 		if (num % i == 0)
-		{
-			factor = i;
-
-			if (
+			largest_pfactor = num / i;
+	}
+	printf("%ld", largest_pfactor);
+	return (0);
+}
