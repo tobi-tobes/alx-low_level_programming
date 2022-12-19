@@ -25,11 +25,10 @@ void rev_string(char *s)
 	{
 		string_rev++;
 	}
-	for (j = 0; j < length; j++)
+	for (j = length - 1; j <= 0; j--)
 	{
 		rep = s[i];
-		s[i] = *string_rev;
-		*string_rev = rep;
-		string_rev--;
+		s[i] = *string_rev[i];
 	}
+	*s = *string_rev
 }
