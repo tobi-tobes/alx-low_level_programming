@@ -9,20 +9,14 @@
  */
 int _atoi(char *s)
 {
-	int p, i, sign, length;
+	int p, i, sign;
 	int num;
 
 	p = 0;
 	sign = 1;
 	num = 0;
-	length = 0;
 
-	while (s[p] != '\0')
-	{
-		length++;
-		p++;
-	}
-	for (i = 0; i < length; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == '-')
 		{
