@@ -9,17 +9,23 @@
  */
 void rev_string(char *s)
 {
-	int i, j;
+	int i, j, length;
 	char *string_rev;
 	char rep;
 
 	string_rev = s;
+	length = 0;
 
-	for (i = 1; (unsigned)i < strlen(s); i++)
+	while (s[length] != '\0')
+	{
+		length++;
+	}
+
+	for (i = 1; i < length; i++)
 	{
 		string_rev++;
 	}
-	for (j = 0; (unsigned)j < strlen(s) / 2; j++)
+	for (j = 0; j < length / 2; j++)
 	{
 		rep = s[i];
 		s[i] = *string_rev;
