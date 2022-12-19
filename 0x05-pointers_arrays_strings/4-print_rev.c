@@ -11,15 +11,11 @@ void print_rev(char *s)
 {
 	int i;
 
-	i = strlen(s) - 1;
+	i = strlen(s);
 
-	if (s[i] == '\0')
+	for (i -= 1; i >= 0; i--)
 	{
-		while (i <= 0)
-		{
-			_putchar(s[i]);
-			i--;
-		}
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
