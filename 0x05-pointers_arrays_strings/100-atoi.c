@@ -20,9 +20,13 @@ int _atoi(char *s)
 		if (s[i] == '-')
 		{
 			sign *= -1;
+			continue;
 		}
 		else if (s[i] == '+')
+		{
 			sign *= 1;
+			continue;
+		}
 		if (s[i] >= '0' && s[i] <= '9')
 			num = (num * 10) + (s[i] - '0');
 		else
