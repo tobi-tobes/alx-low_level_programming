@@ -11,7 +11,6 @@ void rev_string(char *s)
 {
 	int i, j, length;
 	char *string_rev;
-	char rep;
 
 	string_rev = s;
 	length = 0;
@@ -27,8 +26,7 @@ void rev_string(char *s)
 	}
 	for (j = length - 1; j <= 0; j--)
 	{
-		rep = s[i];
-		s[i] = *string_rev[i];
+		s[i] = string_rev[i];
 	}
-	*s = *string_rev
+	*s = *string_rev;
 }
