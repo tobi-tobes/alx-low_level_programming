@@ -26,15 +26,12 @@ int _strcmp(char *s1, char *s2)
 		return (1);
 	else if (length_one < length_two)
 		return (-1);
-	else
+	for (i = 0; i < length_one; i++)
 	{
-		for (i = 0; i < length_one; i++)
-		{
-			if (s1[i] > s2[i])
-				return (1);
-			else if (s1[i] < s2[i])
-				return (-1);
-		}
-		return (0);
+		if (s1[i] > s2[i])
+			return (1);
+		else if (s1[i] < s2[i])
+			return (-1);
 	}
+	return (0);
 }
