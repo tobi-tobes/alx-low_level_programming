@@ -10,7 +10,7 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int length_one, length_two, i, j, k;
+	int length_one, length_two, k, i, j;
 
 	length_one = length_two = 0;
 
@@ -31,5 +31,6 @@ char *_strncat(char *dest, char *src, int n)
 			break;
 		}
 	}
+
 	return (dest);
 }
