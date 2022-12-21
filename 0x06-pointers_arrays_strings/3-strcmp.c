@@ -22,16 +22,12 @@ int _strcmp(char *s1, char *s2)
 		length_two++;
 		s2++;
 	}
-	if (length_one > length_two)
-		return (1);
-	else if (length_one < length_two)
-		return (-1);
 	for (i = 0; i < length_one; i++)
 	{
-		if (s1[i] > s2[i])
-			return (1);
-		else if (s1[i] < s2[i])
-			return (-1);
+		if (s1[i] = s2[i])
+			continue;
+		else (s1[i] > s2[i])
+			return (s1[i] - s2[i]);
 	}
 	return (0);
 }
