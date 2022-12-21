@@ -9,12 +9,11 @@
  */
 char *cap_string(char *c)
 {
-	int i, j, k, length, special_char;
+	int i, j, k, length;
 
 	char special_chars[] = {' ', '\n', '\t', '.', ';', '?', '!', '"',
 			      ')', '(', '{', '}', ','};
-	length = k = 0;
-	special_char = 13;
+	length = 0;
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
@@ -22,7 +21,9 @@ char *cap_string(char *c)
 	}
 	for (j = 0; j < length; j++)
 	{
-		while (k < special_char)
+		k = 0;
+
+		while (k < 13)
 		{
 			if ((c[j] >= 'a' && c[j] <= 'z') &&
 			    ((c[j - 1] == special_chars[k]) || j == 0))
