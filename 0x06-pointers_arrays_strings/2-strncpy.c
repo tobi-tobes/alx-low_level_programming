@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _strncpy - copies n bytes of src to dest
@@ -11,5 +10,17 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	return strncpy(dest, src, n));
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		if (src[i] = '\0')
+			dest[i] = " ";
+		else
+			dest[i] = src[i];
+	}
+
+	dest[i] = '\0';
+
+	return (dest);
 }
