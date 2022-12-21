@@ -8,21 +8,9 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, length_one, length_two;
+	int i;
 
-	length_one = length_two = 0;
-
-	while (*s1)
-	{
-		length_one++;
-		s1++;
-	}
-	while (*s2)
-	{
-		length_two++;
-		s2++;
-	}
-	for (i = 0; i < length_one; i++)
+	for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
 	{
 		if (s1[i] == s2[i])
 			continue;
