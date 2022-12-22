@@ -9,30 +9,20 @@
  */
 char *cap_string(char *c)
 {
-	int i, j, k, length;
-
-	char special_chars[] = {' ', '\n', '\t', '.', ';', '?', '!', '"',
+	int j, k;
+	int nspecial = 13;
+	char special_chars[] = {32, '\n', '\t', '.', ';', '?', '!', '"',
 			      ')', '(', '{', '}', ','};
-	length = 0;
 
-	for (i = 0; c[i] != '\0'; i++)
+	for (j = 0; c[j]; j++)
 	{
-		length++;
-	}
-	for (j = 0; j < length; j++)
-	{
-		k = 0;
-
-		while (k < 13)
+		for (k = 0; k < nspecial; k++)
 		{
 			if ((c[j] >= 'a' && c[j] <= 'z') &&
 			    (j == 0 || c[j - 1] == special_chars[k]))
 			{
 				c[j] = c[j] - 32;
-				k++;
 			}
-			else
-				continue;
 		}
 	}
 	return (c);
