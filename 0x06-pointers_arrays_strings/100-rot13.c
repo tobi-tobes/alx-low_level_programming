@@ -16,10 +16,10 @@ char *rot13(char *c)
 		{
 			if ((c[i] >= 'N' && c[i] <= 'Z') ||
 			    (c[i] >= 'n' && c[i] <= 'z'))
-				{
-					c[i] = c[i] - 13;
-					break;
-				}
+			{
+				c[i] = c[i] - 13;
+				break;
+			}
 			c[i] = c[i] + 13;
 			break;
 		}
