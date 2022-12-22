@@ -10,6 +10,7 @@
 void print_number(int n)
 {
 	unsigned int num, size;
+
 	if (n < 0)
 	{
 		num = -n;
@@ -19,7 +20,9 @@ void print_number(int n)
 	{
 		num = n;
 	}
+
 	size = 1000000000;
+
 	do {
 		if (size <= num || size == 1)
 			_putchar((num / size) % 10 + '0');
