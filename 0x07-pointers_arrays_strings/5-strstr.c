@@ -9,31 +9,17 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, k, counter, needle_count;
-	char *found;
+	int i, j;
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		if (haystack[i] == needle[0])
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			k = i + 1;
-			counter = needle_count = 1;
-
-			for (j = 1; needle[j] != '\0'; j++)
+			if (haystack[i + j] != needle[j])
+				break;
+			if (needle[j + 1] == '\0')
 			{
-				if (haystack[k] == needle[j])
-				{
-					counter++;
-					needle_count++;
-					k++;
-				}
-				else
-					break;
-			}
-			if (counter == needle_count)
-			{
-				found = &haystack[i];
-				return (found);
+				return (haystack + i);
 			}
 		}
 	}
