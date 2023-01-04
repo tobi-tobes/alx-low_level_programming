@@ -22,6 +22,8 @@ int str_length(char *s)
  */
 int pal_checker(char *s, int l)
 {
+	if (l == 1)
+		return (1);
 	if (*s == s[l - 1])
 		pal_checker(s + 1, l - 2);
 	else
