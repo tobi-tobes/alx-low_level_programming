@@ -39,7 +39,7 @@ int is_palindrome(char *s)
 {
 	int len = str_length(s) - 1;
 
-	if (*s == "")
+	if (*s == '\0')
 		return (1);
 	return (pal_checker(s, len));
 }
