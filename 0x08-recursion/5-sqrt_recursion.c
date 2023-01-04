@@ -27,5 +27,5 @@ int sqrt_finder(int a, int i, int counter)
 		return (-1);
 	if (i == a)
 		return (counter);
-	return sqrt_finder(a - i, i + 2, counter + 1);
+	return (sqrt_finder(a - i, i + 2, counter + 1));
 }
