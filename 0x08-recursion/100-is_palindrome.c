@@ -22,7 +22,7 @@ int str_length(char *s)
  */
 int pal_checker(char *s, int l)
 {
-	if (l < 0)
+	if (l <= 1)
 		return (1);
 	if (*s != s[l])
 		return (0);
