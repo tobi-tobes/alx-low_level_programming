@@ -24,10 +24,10 @@ int pal_checker(char *s, int l)
 {
 	if (l <= 1)
 		return (1);
-	if (*s != s[l])
+	if (*s != s[l - 1])
 		return (0);
 	else
-		return (pal_checker(s + 1, l - 1));
+		return (pal_checker(s + 1, l - 2));
 }
 
 /**
