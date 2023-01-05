@@ -38,7 +38,7 @@ int pal_checker(char *s, int l)
  */
 int is_palindrome(char *s)
 {
-	int len = str_length(s) - 1;
+	int len = str_length(s);
 
 	if (*s == '\0')
 		return (1);
