@@ -17,8 +17,7 @@ int main(int argc, char *argv[])
 
 		for (j = 0; j < argc; j++)
 		{
-			printf(argv[j]);
-			printf("\n");
+			printf("%s\n", argv[j]);
 		}
 	}
 	return (0);

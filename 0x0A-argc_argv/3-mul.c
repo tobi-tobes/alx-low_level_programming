@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc == 2)
+	if (argc == 3)
 	{
 		int j, product;
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 }

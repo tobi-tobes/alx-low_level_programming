@@ -11,6 +11,8 @@
  */
 int main(int argc, char *argv[])
 {
+	(void)argv;
+
 	if (argc > 0)
 	{
 		int j, count;
