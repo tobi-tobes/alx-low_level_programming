@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 		count = 0;
 
-		for (j = 0; j < argc; j++)
+		for (j = 1; j < argc; j++)
 		{
 			count++;
 		}
