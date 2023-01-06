@@ -10,5 +10,13 @@
  */
 int _abs(int n)
 {
-	return (abs(n));
+	if (n < 0)
+	{
+		int absol;
+
+		absol = n * -1;
+
+		return (absol);
+	}
+	return (n);
 }
