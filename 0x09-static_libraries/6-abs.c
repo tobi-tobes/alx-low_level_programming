@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
  * _abs - computes the absolute value

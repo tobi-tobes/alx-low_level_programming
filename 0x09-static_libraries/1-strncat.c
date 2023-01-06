@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+
 /**
  * _strncat - concatenates two strings with at most n bytes from src
  * @dest: pointer to resulting appended string

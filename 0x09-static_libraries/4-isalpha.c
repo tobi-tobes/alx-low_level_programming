@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <ctype.h>
+#include "main.h"
 
 /**
  * _isalpha - returns 1 if c is a letter, lowercase or uppercase.

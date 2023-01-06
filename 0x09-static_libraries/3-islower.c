@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <ctype.h>
+#include "main.h"
 
 /**
  * _islower - returns 1 if c is lowercase and 0 otherwise
