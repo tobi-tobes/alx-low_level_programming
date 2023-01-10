@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 	int sum = 0, str = 0, el = 0, c;
 	char *comb;
 
-	if (ac == NULL || av == NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	while (str < ac)
