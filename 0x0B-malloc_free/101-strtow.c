@@ -11,22 +11,23 @@ char **strtow(char *str)
 {
 	int brk = 0, wlen = 0, n = 0, p = 0, k, m;
 	char **words;
-    
-	if (str == NULL || str == "")
+
+	if (str == NULL || str == 32)
 	{
 		return (NULL);
 	}
-    
+
 	for (k = 0; str[k] != '\0'; k++)
 	{
-		if ((str[k] != 32 && str[k + 1] == 32) || (str[k] != 32 && str[k + 1] == '\0'))
+		if ((str[k] != 32 && str[k + 1] == 32) ||
+		    (str[k] != 32 && str[k + 1] == '\0'))
 		{
 			brk++;
 		}
 	}
-    
+
 	words = malloc(sizeof(char *) * (brk + 1));
-    
+
 	if (words == NULL)
 	{
 		return (NULL);
