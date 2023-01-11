@@ -12,7 +12,7 @@ char **strtow(char *str)
 	int brk = 0, wlen = 0, n = 0, p = 0, k, m;
 	char **words;
 
-	if (str == NULL || str == 32)
+	if (str == NULL || *str == 32)
 	{
 		return (NULL);
 	}
