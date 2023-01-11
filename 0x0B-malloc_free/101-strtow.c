@@ -12,7 +12,7 @@ char **strtow(char *str)
 	int brk = 0, wlen = 0, n = 0, p = 0, k, m;
 	char **words;
 
-	if (str == 0 || *str == 0)
+	if (str == NULL || *str == 0)
 	{
 		return (NULL);
 	}
@@ -25,6 +25,9 @@ char **strtow(char *str)
 			brk++;
 		}
 	}
+
+	if (brk == 0)
+		return (NULL);
 
 	words = malloc(sizeof(char *) * (brk + 1));
 
