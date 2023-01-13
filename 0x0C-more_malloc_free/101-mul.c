@@ -55,7 +55,7 @@ unsigned long int _atoi(char *s)
 
 /**
  * print_number - prints integers to standard output
- * @s: Integer to print
+ * @n: Integer to print
  *
  * Return: nothing
  */
