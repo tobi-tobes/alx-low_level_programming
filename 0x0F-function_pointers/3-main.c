@@ -17,14 +17,15 @@ int main(int argc, char *argv[])
 
 	if (argc == 4)
 	{
-		if ((argv[2] == 37 || argv[2] == 47) && argv[3] == 48)
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[3]);
+		ptr = get_op_func(argv[2]);
+
+		if (ptr == NULL)
 		{
 			printf("Error\n");
 			exit(100);
 		}
-		num1 = atoi(argv[1]);
-		num2 = atoi(argv[3]);
-		ptr = get_op_func(argv[2]);
 
 		sol = ptr(num1, num2);
 
