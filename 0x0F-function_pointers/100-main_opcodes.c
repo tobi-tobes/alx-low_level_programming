@@ -23,14 +23,15 @@ int main(int argc, char *argv[])
 			exit(2);
 		}
 		ptr = main;
+		ptr += 4;
 
 		for (j = 0; j < numbytes; j++)
 		{
 			if (j == numbytes - 1)
 			{
-				printf("%02hhx\n", *(int*)ptr);
+				printf("%02hhx\n", *(char *)ptr);
 			}
-			printf("%02hhx ", *(int*)ptr);
+			printf("%02hhx ", *(char *)ptr);
 			ptr++;
 		}
 		return (0);
