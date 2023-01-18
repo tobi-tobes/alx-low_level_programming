@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int numbytes, j;
-	int (* ptr)(int, char**);
+	int (*ptr)(int, char**);
 
 	if (argc == 2)
 	{
