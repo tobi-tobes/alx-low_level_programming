@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		if (ptr == NULL)
 		{
 			printf("Error\n");
-			exit(100);
+			exit(99);
 		}
 
 		sol = ptr(num1, num2);
