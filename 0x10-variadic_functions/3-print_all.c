@@ -51,7 +51,7 @@ void print_string(va_list argp, char *separator)
 
 	if (string == NULL)
 	{
-		printf("(nil)%s", separator);
+		printf("%s(nil)", separator);
 		return;
 	}
 	printf("%s%s", separator, string);
