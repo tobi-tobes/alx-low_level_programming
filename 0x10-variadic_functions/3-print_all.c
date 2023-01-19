@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == *formats[j].type)
 			{
 				formats[j].p(ap);
-				if (format[i + 1] != NULL)
+				if (format[i + 1])
 					printf(", ");
 			}
 			j++;

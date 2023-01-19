@@ -15,7 +15,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i = 0;
 	char *current_string;
 
-	if (separator != NULL)
+	if (separator != NULL && n > 0)
 	{
 		va_start(ap, n);
 		for (; i < n; i++)
