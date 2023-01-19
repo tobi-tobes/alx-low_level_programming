@@ -20,7 +20,8 @@ int _putchar(char c);
  * @type: The datatype
  * @p: The function associated with the datatype
  */
-typedef struct format_code {
+typedef struct format_code
+{
 	char *type;
 	void (*p)(va_list argp, char *separator);
 } f_t;
