@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int numbytes, j;
-	int (*ptr)(int, char**);
+	char *op;;
 
 	if (argc == 2)
 	{
@@ -22,17 +22,13 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			exit(2);
 		}
-		ptr = main;
+		op = (char *)main;
 
-		for (j = 0; j < numbytes; j++)
+		for (j = 0; j < numbytes - 1; j++)
 		{
-			if (j == numbytes - 1)
-			{
-				printf("%02hhx\n", *(int *)ptr);
-			}
-			printf("%02hhx ", *(int *)ptr);
-			ptr++;
+			printf("%02hhx ", op[j]);
 		}
+		printf("%02hhx\n", op[j]);
 		return (0);
 	}
 	printf("Error\n");
