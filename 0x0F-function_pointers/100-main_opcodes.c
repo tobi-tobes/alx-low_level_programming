@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int numbytes, j;
-	char *op;;
+	char *op;
 
 	if (argc == 2)
 	{
