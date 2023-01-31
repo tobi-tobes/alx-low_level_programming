@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - frees a linked list (safe version)
- * @head: pointer to the pointer to first element in the list
+ * free_listint_safe - frees a linked list (safe version)
+ * @h: pointer to the pointer to first element in the list
  *
  * Return: number of elements in list or 0 on failure
  */
@@ -36,7 +36,7 @@ size_t free_listint_safe(listint_t **h)
 			fast = temp;
 			num_fast++;
 		}
-		*h = temp;
+		*h = NULL;
 		return (num_fast);
 	}
 	return (0);
