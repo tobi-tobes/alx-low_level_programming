@@ -19,7 +19,8 @@ size_t print_listint_safe(const listint_t *head)
 			{
 				if (slow == fast)
 				{
-					printf("-> [%p] %d\n", (void *)fast, fast->n);
+					printf("-> [%p] %d\n", (void *)fast,
+					       fast->n);
 					return (num_fast);
 				}
 				num_slow++;
