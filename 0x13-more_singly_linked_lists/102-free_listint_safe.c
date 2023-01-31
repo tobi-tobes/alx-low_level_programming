@@ -9,7 +9,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t num_fast, num_slow;
-	const listint_t *fast, *slow, *temp;
+	listint_t *fast, *slow, *temp;
 
 	if (h != NULL && *h != NULL)
 	{
@@ -32,7 +32,7 @@ size_t free_listint_safe(listint_t **h)
 				slow = slow->next;
 			}
 			temp = fast->next;
-			free(fast);
+			free((void *)fast);
 			fast = temp;
 			num_fast++;
 		}
