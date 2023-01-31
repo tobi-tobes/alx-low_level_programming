@@ -32,7 +32,6 @@ size_t print_listint_safe(const listint_t *head)
 			num_fast++;
 			fast = fast->next;
 		}
-		return (num_fast);
 	}
-	exit(98);
+	return (num_fast);
 }
