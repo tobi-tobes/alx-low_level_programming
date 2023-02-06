@@ -26,18 +26,18 @@ void copier(char *file1, char *file2)
 
 	while ((bytes_read = read(fd1, buffer, sizeof(buffer))) > 0)
 	{
-		if (bytes_read < 0)
-		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", file1);
-			exit(98);
-		}
 		if (write(fd2, buffer, bytes_read) != bytes_read || fd2 < 0)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", file2);
 			exit(99);
 		}
+	}
+	if (bytes_read < 0)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't read from file %s\n", file1);
+		exit(98);
 	}
 	if (close(fd1) < 0)
 	{
