@@ -11,7 +11,7 @@ void copier(char *file1, char *file2)
 {
 	int fd1, fd2;
 	ssize_t bytes_read;
-	char buffer[1024];
+	char *buffer;
 
 	fd1 = open(file1, O_RDONLY);
 
@@ -24,20 +24,25 @@ void copier(char *file1, char *file2)
 
 	fd2 = open(file2, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
+	buffer = malloc(sizeof(char) * 1024);
+
+	if (buffer == NULL)
+		exit(99);
+
 	while ((bytes_read = read(fd1, buffer, sizeof(buffer))) > 0)
 	{
+		if (bytes_read < 0)
+		{
+			dprintf(STDERR_FILENO,
+				"Error: Can't read from file %s\n", file1);
+			exit(98);
+		}
 		if (write(fd2, buffer, bytes_read) != bytes_read || fd2 < 0)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", file2);
 			exit(99);
 		}
-	}
-	if (bytes_read < 0)
-	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't read from file %s\n", file1);
-		exit(98);
 	}
 	if (close(fd1) < 0)
 	{
@@ -49,6 +54,7 @@ void copier(char *file1, char *file2)
 		dprintf(STDERR_FILENO, "Error: Can't close fd%d\n", fd2);
 		exit(100);
 	}
+	free(buffer);
 }
 
 /**
