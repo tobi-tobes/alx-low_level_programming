@@ -56,29 +56,26 @@ void copier(char *file1, char *file2)
  * @argc: argument count
  * @argv: argument vector
  *
- * Return: 0 on success or 97 on error
+ * Return: 0 on success or 97, 98, or 99 on error
  */
 int main(int argc, char *argv[])
 {
 	if (argc == 3)
 	{
-		if (argv[1] != NULL && argv[2] != NULL)
-		{
-			copier(argv[1], argv[2]);
-			return (0);
-		}
 		if (argv[1] == NULL)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", file1);
+				"Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		if (argv[2] == NULL)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", file2);
+				"Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
+		copier(argv[1], argv[2]);
+		return (0);
 	}
 	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(97);
