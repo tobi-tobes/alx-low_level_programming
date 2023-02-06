@@ -67,6 +67,18 @@ int main(int argc, char *argv[])
 			copier(argv[1], argv[2]);
 			return (0);
 		}
+		if (argv[1] == NULL)
+		{
+			dprintf(STDERR_FILENO,
+				"Error: Can't read from file %s\n", file1);
+			exit(98);
+		}
+		if (argv[2] == NULL)
+		{
+			dprintf(STDERR_FILENO,
+				"Error: Can't write to %s\n", file2);
+			exit(99);
+		}
 	}
 	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(97);
