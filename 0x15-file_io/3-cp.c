@@ -49,7 +49,6 @@ void copier(char *file1, char *file2)
 		dprintf(STDERR_FILENO, "Error: Can't close fd%d\n", fd2);
 		exit(100);
 	}
-	free(buffer);
 }
 
 /**
