@@ -11,7 +11,7 @@ void copier(char *file1, char *file2)
 {
 	int fd1, fd2;
 	ssize_t bytes_read;
-	char *buffer;
+	char buffer[1024];
 
 	fd1 = open(file1, O_RDONLY);
 
@@ -23,11 +23,6 @@ void copier(char *file1, char *file2)
 	}
 
 	fd2 = open(file2, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-
-	buffer = malloc(sizeof(char) * 1024);
-
-	if (buffer == NULL)
-		exit(99);
 
 	while ((bytes_read = read(fd1, buffer, sizeof(buffer))) > 0)
 	{
