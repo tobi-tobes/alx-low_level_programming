@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * dlistint_len - returns the number of elements in a linked dlistint_t list.
+ * dlistint_leng - returns the number of elements in a linked dlistint_t list.
  * @h: pointer to first element in the list
  *
  * Return: number of elements in a list
  */
-unsigned int dlistint_len(const dlistint_t *h)
+unsigned int dlistint_leng(const dlistint_t *h)
 {
 	unsigned int length = 0;
 
@@ -55,7 +55,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		temp = temp->next;
 		counter++;
 	}
-	if (temp->next == NULL && idx == dlistint_len((*h)))
+	if (temp->next == NULL && idx == dlistint_leng((*h)))
 		return (add_dnodeint_end(h, n));
 	if (counter < idx)
 		return (NULL);
