@@ -13,7 +13,7 @@ void update_key(hash_node_t *item, const char *value)
 
 	update = malloc((sizeof(char) * strlen(value)) + 1);
 	if (update == NULL)
-		return (0);
+		return;
 	strcpy(update, value);
 	holder = item->value;
 	item->value = update;
@@ -33,11 +33,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *temp, *new_item;
-	char *update, *holder;
 
 	if (strlen(key) == 0 || ht == NULL)
 		return (0);
-	index = key_index(key, ht->size);
+	index = key_index((unsigned char *)key, ht->size);
 	if (ht->array[index] != NULL && strcmp(ht->array[index]->key, key) == 0)
 	{
 		update_key(ht->array[index], value);
