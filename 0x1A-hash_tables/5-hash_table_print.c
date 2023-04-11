@@ -26,7 +26,7 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht->array[i] == NULL)
 			continue;
-		printf("%s: %s", ht->array[i]->key, ht->array[i]->value);
+		printf("'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
 		if (ht->array[i] != NULL)
 			compare++;
 		if (compare < no_items)
@@ -36,7 +36,7 @@ void hash_table_print(const hash_table_t *ht)
 			for (temp = ht->array[i]->next; temp != NULL;
 			     temp = temp->next)
 			{
-				printf("%s: %s", temp->key, temp->value);
+				printf("'%s': '%s'", temp->key, temp->value);
 				if (temp->next != NULL)
 					printf(", ");
 			}
