@@ -5,6 +5,7 @@ Returns the perimeter of the island described in grid
 """
 
 def island_perimeter(grid):
+    """Returns the perimeter of the island described in grid"""
     sum = 0
     for i in grid:
         for j in i:
