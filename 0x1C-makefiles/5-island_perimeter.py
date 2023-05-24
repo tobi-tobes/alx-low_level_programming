@@ -18,6 +18,12 @@ def island_perimeter(grid):
                 elif (grid[i - 1][j] == 1 or grid[i + 1][j] == 1) and (
                         grid[i][j - 1] == 1 or grid[i][j + 1] == 1):
                     sum += 2
+                elif (grid[i - 1][j] == 1 and grid[i + 1][j] == 1) and (
+                        grid[i][j - 1] == 1 or grid[i][j + 1] == 1):
+                    sum += 3
+                elif (grid[i - 1][j] == 1 or grid[i + 1][j] == 1) and (
+                        grid[i][j - 1] == 1 and grid[i][j + 1] == 1):
+                    sum += 3
                 else:
                     sum += 1
             else:
