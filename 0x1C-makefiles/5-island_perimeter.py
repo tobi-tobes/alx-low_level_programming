@@ -10,23 +10,21 @@ def island_perimeter(grid):
     sum = 0
     w = len(grid[0])
     h = len(grid)
+    perimeter = 0
+    surrounding = 4
     for i in range(h):
         for j in range(w):
             if grid[i][j] == 1:
-                if i == 0 or i == h - 1:
-                    sum += 1
-                elif (grid[i - 1][j] == 1 or grid[i + 1][j] == 1) and (
-                        grid[i][j - 1] == 1 or grid[i][j + 1] == 1):
-                    sum += 2
-                elif (grid[i - 1][j] == 1 and grid[i + 1][j] == 1) and (
-                        grid[i][j - 1] == 1 or grid[i][j + 1] == 1):
-                    sum += 3
-                elif (grid[i - 1][j] == 1 or grid[i + 1][j] == 1) and (
-                        grid[i][j - 1] == 1 and grid[i][j + 1] == 1):
-                    sum += 3
-                else:
-                    sum += 1
+                if i - 1 >= 0 and grid[i - 1][j] == 1:
+                    surrounding -= 1
+                if i + 1 <= h - 1 and grid[i + 1][j] == 1:
+                    surrounding -= 1
+                if j - 1 >= 0 and grid[1][j - 1] == 1:
+                    surrounding -= 1
+                if j + 1 <= w - 1 and grid[1][j + 1] == 1:
+                    surrounding -= 1
+                perimeter += surrounding
             else:
                 continue
-    perimeter = sum * 2
+        surrounding = 4
     return perimeter
