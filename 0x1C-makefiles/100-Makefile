@@ -8,7 +8,7 @@ all : $(NAME)
 .PHONY : all
 
 school : $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	$(CC) -o $(NAME) $(OBJ)
 
 .PHONY : clean oclean fclean re
 clean :
@@ -16,7 +16,6 @@ clean :
 oclean :
 	$(RM) $(OBJ)
 fclean : clean oclean
-	$(RM) $(OBJ) *~ $(NAME)
+	;
 re : fclean all
-	$(CC) -c $(SRC)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	;
