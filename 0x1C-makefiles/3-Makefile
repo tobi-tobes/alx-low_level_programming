@@ -20,4 +20,4 @@ fclean :
 	$(RM) $(OBJ) *~ $(NAME)
 re :
 	$(RM) $(OBJ)
-	$(CC) $(SRC) m.h -o school
+	$(CC) -o $(NAME) $(OBJ)
