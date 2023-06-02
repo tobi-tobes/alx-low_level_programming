@@ -17,3 +17,7 @@ oclean :
 	$(RM) $(OBJ)
 fclean : clean oclean
 re : fclean all
+
+ifeq ($(wildcard m.h),)
+$(error Header file m.h not found!)
+endif
