@@ -28,11 +28,11 @@ int advanced_binary_rec(int *array, int low, int high, int value)
 		}
 		printf("\n");
 		m = (l + h) / 2;
-		if ((m == 0 || array[m - 1] != value) && array[m] == value)
+		if ((m == 0 || array[m - 1] < value) && array[m] == value)
 			return (m);
 
 		if (array[m] >= value)
-			return (advanced_binary_rec(array, l, m - 1, value));
+			return (advanced_binary_rec(array, l, m, value));
 		else
 			return (advanced_binary_rec(array, m + 1, h, value));
 	}
